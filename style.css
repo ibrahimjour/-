@@ -10,6 +10,7 @@
 body {
   width: 100vw;
   overflow: hidden;
+  background-color: #5C94FC; /* لون سماء ماريو الأصلية */
 }
 
 .container {
@@ -22,7 +23,9 @@ body {
   transform: translate(-50%, 0);
   height: 80px;
   width: 80px;
-background-image: url('https://media.giphy.com/media/3o7TKMGpxxZESpCQU8/giphy.gif');  background-size: cover;
+  /* رابط جديد لصندوق ماريو المتحرك */
+  background-image: url('https://www.mariowiki.com/images/a/a3/Question_Block_Art_-_New_Super_Mario_Bros.png');
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
@@ -32,6 +35,7 @@ background-image: url('https://media.giphy.com/media/3o7TKMGpxxZESpCQU8/giphy.gi
   position: absolute;
   width: 78px;
   height: 68px;
+  /* رابط صورة ماريو */
   background-image: url('https://jakevdp.github.io/images/mario_graphics1.png');
   background-position-y: -191px;
   background-position-x: -22px;
@@ -44,28 +48,10 @@ background-image: url('https://media.giphy.com/media/3o7TKMGpxxZESpCQU8/giphy.gi
   transform: translate(-50%, 1px);
   height: 80px;
   width: 80px;
-  text-align: center;
-  font-size: 70px;
-  text-shadow:
-		-3px -3px 0 #000,
-		3px -3px 0 #000,
-		-3px 3px 0 #000,
-		3px 3px 0 #000;
   font-family: 'Bangers', cursive;
-  animation: moveUp 1.5s linear;
-}
-
-@keyframes moveUp {
-  from { transform: translate(-50%, 1px); }
-  to { transform: translate(-50%, -150px); }
-}
-
-.hit {
-  animation: blockHit .2s linear;
-}
-
-@keyframes blockHit {
-  0% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -20px); };
-  100% { transform: translate(-50%, 0); }  
+  text-align: center;
+  font-size: 60px;
+  z-index: 0;
+  transition: all .2s ease-in-out;
+  opacity: 0;
 }
