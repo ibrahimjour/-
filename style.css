@@ -9,33 +9,47 @@
 
 body {
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  background-color: #5C94FC; /* لون سماء ماريو الأصلية */
+  background-color: #5C94FC; /* لون سماء ماريو */
 }
 
 .container {
   height: 100vh;
+  width: 100%;
 }
 
+/* تصميم المربع يدوياً لضمان ظهوره */
 .block {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
   height: 80px;
   width: 80px;
-  /* رابط جديد لصندوق ماريو المتحرك */
-  background-image: url('https://www.mariowiki.com/images/a/a3/Question_Block_Art_-_New_Super_Mario_Bros.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #f7d016; /* لون أصفر */
+  border: 4px solid #000;
+  box-shadow: -4px 4px 0 rgba(0,0,0,0.2);
   z-index: 1;
+}
+
+/* إضافة علامة الاستفهام داخل المربع */
+.block::after {
+  content: "?";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  color: #fb9003;
 }
 
 .mario {
   position: absolute;
   width: 78px;
   height: 68px;
-  /* رابط صورة ماريو */
   background-image: url('https://jakevdp.github.io/images/mario_graphics1.png');
   background-position-y: -191px;
   background-position-x: -22px;
@@ -54,4 +68,6 @@ body {
   z-index: 0;
   transition: all .2s ease-in-out;
   opacity: 0;
+  color: white;
+  text-shadow: 2px 2px 0 #000;
 }
