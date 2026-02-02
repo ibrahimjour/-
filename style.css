@@ -22,8 +22,7 @@ body {
   transform: translate(-50%, 0);
   height: 80px;
   width: 80px;
-  background-image: url('https://pa1.narvii.com/6489/524d20cabd4731dffd6453fb707ab1d2b2b11c52_00.gif');
-  background-size: cover;
+background-image: url('https://media.giphy.com/media/3o7TKMGpxxZESpCQU8/giphy.gif');  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
