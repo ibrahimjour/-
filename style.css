@@ -11,7 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #5C94FC; /* لون سماء ماريو */
+  background-color: #5C94FC !important; /* تأكيد لون الخلفية */
 }
 
 .container {
@@ -19,22 +19,22 @@ body {
   width: 100%;
 }
 
-/* تصميم المربع يدوياً لضمان ظهوره */
+/* تصميم المربع يدوياً بألوان قوية */
 .block {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   height: 80px;
   width: 80px;
-  background-color: #f7d016; /* لون أصفر */
-  border: 4px solid #000;
-  box-shadow: -4px 4px 0 rgba(0,0,0,0.2);
-  z-index: 1;
+  background-color: #FFCC00 !important; /* أصفر ماريو */
+  border: 5px solid #000 !important;
+  display: block !important; /* تأكيد الظهور */
+  z-index: 999;
 }
 
-/* إضافة علامة الاستفهام داخل المربع */
+/* علامة الاستفهام */
 .block::after {
-  content: "?";
+  content: "?" !important;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -42,8 +42,8 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Bangers', cursive;
-  font-size: 50px;
-  color: #fb9003;
+  font-size: 60px;
+  color: #000;
 }
 
 .mario {
@@ -54,6 +54,7 @@ body {
   background-position-y: -191px;
   background-position-x: -22px;
   transition: bottom .3s linear;
+  z-index: 1000;
 }
 
 .number {
@@ -66,8 +67,6 @@ body {
   text-align: center;
   font-size: 60px;
   z-index: 0;
-  transition: all .2s ease-in-out;
-  opacity: 0;
   color: white;
   text-shadow: 2px 2px 0 #000;
 }
