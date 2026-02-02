@@ -24,15 +24,16 @@ body {
   position: absolute !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  height: 80px;
-  width: 80px;
-  background-color: #FFCC00 !important; /* أصفر ماريو */
-  border: 5px solid #000 !important;
-  display: block !important; /* تأكيد الظهور */
-  z-index: 999;
+  height: 80px !important;
+  width: 80px !important;
+  background-color: #f7d016 !important; /* اللون الأصفر للمربع */
+  border: 4px solid #000 !important; /* إطار أسود */
+  display: block !important;
+  z-index: 10;
+  box-shadow: -4px 4px 0 rgba(0,0,0,0.2);
 }
 
-/* علامة الاستفهام */
+/* إضافة علامة الاستفهام داخل المربع يدوياً */
 .block::after {
   content: "?" !important;
   position: absolute;
@@ -42,8 +43,9 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Bangers', cursive;
-  font-size: 60px;
-  color: #000;
+  font-size: 50px;
+  color: #fb9003;
+  font-weight: bold;
 }
 
 .mario {
